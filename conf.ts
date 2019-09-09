@@ -7,15 +7,14 @@ export const config: Config = {
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     specs: ['../features/*.feature'],
     cucumberOpts: {
-        require: ['./steps/*.js'],
-      //  format: ['./features/support/Reporter.js'],
+        require: ['./steps/*.js']      
     },
     seleniumAddress: 'http://localhost:4444/wd/hub',
     baseUrl: 'swapi.co',
     capabilities: {
         browserName: 'chrome',
         chromeOptions: {
-            args: ['--no-sandbox', '--window-size=1920,1020'],
+            args: ['--no-sandbox', 'headless'],
         },
         ignoreSynchronization: true,
         SELENIUM_PROMISE_MANAGER: false,
