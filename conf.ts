@@ -5,7 +5,7 @@ const jsonReports = process.cwd() + "/reports/json";
 export const config: Config = {
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
-    specs: ['../features/*.feature'],
+    specs: ['../Features/*.feature'],
     cucumberOpts: {
         require: ['./steps/*.js']      
     },
